@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css" >
+<script type="text/javascript">
+function valid(){
+	var cpass=document.frm.cpass.value;
+	var cname=document.frm.cname.value;
+	var cphn=document.frm.cphn.value;
+	var cmail=document.frm.cmail.value;
+	if(cpass==""){
+		alert("Please enter password");
+		return false;
+		}
+	else if(cname==""){
+		alert("Please enter name");
+		return false;
+		}
+	else if(cphn==""){
+		alert("Please enter phone number");
+		return false;
+		}
+	else if(cmail==""){
+		alert("Please enter email");
+		return false;
+		}
+}
+</script>
+</head>
+<body>
+<table class="center">
+<tr>
+<td>
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="spaceinfo.jsp">Space Information</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="login.html">User Login</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact US</a></li>
+
+</ul>
+</td>
+</tr>
+</table>
+<form name="frm" action="Regis" onsubmit="return valid()">
+<table style="border: solid;border-color: red;">
+<tr><th colspan="2">Registration</th></tr>
+<tr><td>Enter Password:</td><td><input type="password" name="cpass"></td></tr>
+<tr><td>Enter Name:</td><td><input type="text" name="cname"></td></tr>
+<tr><td>Enter Contact Number:</td><td><input type="text" name="cphn"></td></tr>
+<tr><td>Enter Email Id :</td><td><input type="text" name="cmail"></td></tr>
+<tr><th colspan="2"><input type="submit" value="Save"></th></tr>
+</table>
+</form>
+</body>
+</html>
